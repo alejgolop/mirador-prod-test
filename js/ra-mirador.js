@@ -6,7 +6,7 @@ var swiper = undefined;
 window.onload = () => {
 
   //Internalization
-
+  $('.arjs-loader').addClass('invisible');
   changeLang(language.code);
   if(availableLanguages.length<2)
   {

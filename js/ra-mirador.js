@@ -181,8 +181,9 @@ function openInfoModal() {
   $("#poi-title").text(langStrings[language.code]["info"]);
 
   $("#poi-body").empty();
-  $("#poi-body").append(`<div class="row"><a class="col" title="${langStrings[language.code]["goToDipu"]}" target="_blank" href="https://www.dipujaen.es/"><img class="text-center w-50" src="data/media/dipu-jaen.jpg" /></a><a class="col" title="${langStrings[language.code]["goToParaiso"]}" target="_blank" href="https://www.jaenparaisointerior.es/"><img class="text-center w-50" src="data/media/paraiso-jaen.jpg" /></a></div>`);
   $("#poi-body").append(`<h3 class="text-center slogan">${langStrings[language.code]["attrib"]}</h3>`);
+  $("#poi-body").append(`<div class="row"><a class="col" title="${langStrings[language.code]["goToDipu"]}" target="_blank" href="https://www.dipujaen.es/"><img class="text-center w-100" src="data/media/dipu-jaen.jpg" /></a></div>`);
+  $("#poi-body").append(`<div class="row"><a class="col" title="${langStrings[language.code]["goToParaiso"]}" target="_blank" href="https://www.jaenparaisointerior.es/"><img class="text-center w-100" src="data/media/paraiso-jaen.jpg" /></a></div>`);
 
   $("#modal-poi").modal("show");
 }

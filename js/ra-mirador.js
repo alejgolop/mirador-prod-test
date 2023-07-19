@@ -183,8 +183,10 @@ function openInfoModal() {
 
   $("#poi-body").empty();
   $("#poi-body").append(`<h3 class="text-center slogan">${langStrings[language.code]["attrib"]}</h3>`);
-  $("#poi-body").append(`<div class="row"><a class="col" title="${langStrings[language.code]["goToDipu"]}" target="_blank" href="https://www.dipujaen.es/"><img class="text-center w-100" src="data/media/dipu-jaen.jpg" /></a></div>`);
-  $("#poi-body").append(`<div class="row"><a class="col" title="${langStrings[language.code]["goToParaiso"]}" target="_blank" href="https://www.jaenparaisointerior.es/"><img class="text-center w-100" src="data/media/paraiso-jaen.jpg" /></a></div>`);
+  $("#poi-body").append(`<div class="row text-center">
+  <div class="col"><a title="${langStrings[language.code]["goToDipu"]}" target="_blank" href="https://www.dipujaen.es/"><img class="attrib-img" src="data/media/dipu-jaen.jpg" /></a></div>
+  <div class="col"><a title="${langStrings[language.code]["goToParaiso"]}" target="_blank" href="https://www.jaenparaisointerior.es/"><img class="attrib-img" src="data/media/paraiso-jaen.jpg" /></a></div>
+  </div>`);
 
   $("#modal-poi").modal("show");
 }

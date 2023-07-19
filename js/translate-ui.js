@@ -4,26 +4,12 @@ const availableLanguages = [
 ];
 
 const langStrings = {
-  en: {
-    "lang-title": "Select Language",
-    "ar-advise-title": "Augmented Reality",
-    "ar-advise-msg":
-      "Please, for your security and a correct operation, keep the device geolocation ON and stay at outdoor areas.",
-    confirmation: "Done",
-    acknowledge: "OK",
-    "geo-advise-title": "Switch On your Device Geolocation ",
-    "geo-advise-msg":
-      "Please, for a correct operation keep the device geolocation ON.",
-    "geo-advise-check": "Already Activated",
-    next: "Next",
-    previous: "Previous",
-    close: "Close",
-  },
   es: {
     "lang-title": "Elegir Indioma",
     "ar-advise-title": "Realidad Aumentada",
     "ar-advise-msg":
       "Por favor, por su seguridad y un correcto funcionamiento, mantén activada la localización del dispositivo móvil y permanece en zonas al aire libre.",
+    info: "Información",
     confirmation: "Hecho",
     acknowledge: "Entendido",
     "geo-advise-title": "Activa la Geolocalización",
@@ -33,7 +19,29 @@ const langStrings = {
     next: "Siguiente",
     previous: "Anterior",
     close: "Cerrar",
-  }
+    goToDipu: "Ir al Sitio Diputación de Jaén",
+    goToParaiso: "Ir al Sitio Jaén Paraíso Interior",
+    attrib: "Actividad subvencionada por la Diputación Provincial de Jaén",
+  },
+  en: {
+    "lang-title": "Select Language",
+    "ar-advise-title": "Augmented Reality",
+    "ar-advise-msg":
+      "Please, for your security and a correct operation, keep the device geolocation ON and stay at outdoor areas.",
+    info: "Info",
+    confirmation: "Done",
+    acknowledge: "OK",
+    "geo-advise-title": "Switch On your Device Geolocation ",
+    "geo-advise-msg":
+      "Please, for a correct operation keep the device geolocation ON.",
+    "geo-advise-check": "Already Activated",
+    next: "Next",
+    previous: "Previous",
+    close: "Close",
+    attrib: "Activity subsidized by the Jaén Provincial Council",
+    goToDipu: "Go to Jaén Provincial Council Website",
+    goToParaiso: "Go to 'Jaén Paraíso Interior' Website",
+  },
 };
 
 var language = availableLanguages[0];
@@ -58,7 +66,6 @@ function changeLang(code) {
 }
 
 function openChooseLangModal() {
-
   var langModalBody = `<div class="row lang-selector"><img id="lang-img" class="col" width="64px" alt="${language.name}" title="${language.name}" src="https://unpkg.com/language-icons/icons/${language.code}.svg">
   <div class="col"><select class="form-select" aria-label="Default select example" onchange="changeLang(this.value);">`;
   availableLanguages.forEach((lang) => {
@@ -83,10 +90,8 @@ function openChooseLangModal() {
     }
   });
 }
-
 
 function openChooseLangModalV2() {
-
   var langModalBody = `<div class="row lang-selector"><img id="lang-img" class="col" width="64px" alt="${language.name}" title="${language.name}" src="https://unpkg.com/language-icons/icons/${language.code}.svg">
   <div class="col"><select class="form-select" aria-label="Default select example" onchange="changeLang(this.value);">`;
   availableLanguages.forEach((lang) => {
@@ -111,5 +116,3 @@ function openChooseLangModalV2() {
     }
   });
 }
-
-

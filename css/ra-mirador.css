@@ -17,6 +17,10 @@
     text-align: justify;
   }
   
+  .slogan{
+    margin-top: 2rem;
+  }
+
   video{
     width: 80%;
     height: auto;
@@ -79,5 +83,8 @@
     margin:0;
   }
 
+  .w-50{
+    width: 50%;
+  }
 
   

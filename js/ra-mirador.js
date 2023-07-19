@@ -126,7 +126,7 @@ function showPOI(poi) {
         newElem = `<div class="swiper-slide"><video controls><source src="${media}" type="video/mp4"></video></div>`;
       } else {
         // Is an Image
-        newElem = `<div class="swiper-slide"><img src="${media}?rnd=${Math.random()}" title="${mediaTitle}" alt="${mediaTitle}"></div>`;
+        newElem = `<div class="swiper-slide"><img src="${media}" title="${mediaTitle}" alt="${mediaTitle}"></div>`;
       }
       $(".swiper-wrapper").append(newElem);
     });
@@ -169,4 +169,20 @@ function stopVideos() {
     video.pause();
     video.currentTime = 0;
   }
+}
+
+function openInfoModal() {
+  console.log("Opening Info Modal");
+
+  $(".swiper-wrapper").empty();
+  swiper?.destroy();
+
+  $("#poi-title-img").attr("src", "img/info-btn.svg");
+  $("#poi-title").text(langStrings[language.code]["info"]);
+
+  $("#poi-body").empty();
+  $("#poi-body").append(`<div class="row"><a class="col" title="${langStrings[language.code]["goToDipu"]}" target="_blank" href="https://www.dipujaen.es/"><img class="text-center w-50" src="data/media/dipu-jaen.jpg" /></a><a class="col" title="${langStrings[language.code]["goToParaiso"]}" target="_blank" href="https://www.jaenparaisointerior.es/"><img class="text-center w-50" src="data/media/paraiso-jaen.jpg" /></a></div>`);
+  $("#poi-body").append(`<h3 class="text-center slogan">${langStrings[language.code]["attrib"]}</h3>`);
+
+  $("#modal-poi").modal("show");
 }

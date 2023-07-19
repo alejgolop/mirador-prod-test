@@ -126,7 +126,7 @@ function showPOI(poi) {
         newElem = `<div class="swiper-slide"><video controls><source src="${media}" type="video/mp4"></video></div>`;
       } else {
         // Is an Image
-        newElem = `<div class="swiper-slide"><img src="${media}" title="${mediaTitle}" alt="${mediaTitle}"></div>`;
+        newElem = `<div class="swiper-slide"><div class="swiper-zoom-container"><img src="${media}" title="${mediaTitle}" alt="${mediaTitle}"></div></div>`;
       }
       $(".swiper-wrapper").append(newElem);
     });
@@ -135,6 +135,7 @@ function showPOI(poi) {
       // Optional parameters
       direction: "horizontal",
       loop: true,
+      zoom: true,
 
       // If we need pagination
       pagination: {

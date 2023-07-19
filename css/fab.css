@@ -2,7 +2,7 @@
   --_viewport-margin: 2.5vmin;
   left: 4px;
   position: fixed;
-  z-index: var(--layer-1);
+  z-index: 1054;
 
   inset-block: var(--_viewport-margin);
   margin-left: var(--_viewport-margin);

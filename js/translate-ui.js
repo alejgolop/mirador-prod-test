@@ -1,5 +1,5 @@
 const availableLanguages = [
-  //{ code: "en", name: "English" },
+  { code: "en", name: "English" },
   { code: "es", name: "Español" },
 ];
 

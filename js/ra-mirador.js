@@ -1,4 +1,4 @@
-const mockPosition=true;
+const mockPosition=false;
 
 var data;
 var swiper = undefined;
@@ -7,18 +7,18 @@ window.onload = () => {
 
   //Internalization
   $('.arjs-loader').addClass('invisible');
-  changeLang(language.code);
+/*   changeLang(language.code);
   if(availableLanguages.length<2)
   {
-    
     loadData();
   }else{
     $("#chooseLang-btn").removeClass("invisible");
     openChooseLangModal();
   }
-
+ */
   //No Internalization
-  //loadData();
+  changeLang(language.code);
+  loadData();
   
 };
 

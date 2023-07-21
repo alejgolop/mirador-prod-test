@@ -13,7 +13,9 @@ function noGeolocationModal() {
 }
 
 async function checkGeo()
-{   geoPermissionStatus= await navigator.permissions.query({ name: "geolocation" });
+{ 
+  await loadARData();  
+  geoPermissionStatus= await navigator.permissions.query({ name: "geolocation" });
     return new Promise((resolve, reject) => {
         
         //console.log(geoPermissionStatus);

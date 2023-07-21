@@ -1,7 +1,5 @@
-const params = new Proxy(new URLSearchParams(window.location.search), {
-  get: (searchParams, prop) => searchParams.get(prop),
-});
-const mockPosition=params.mockoffice!==undefined;
+
+const mockPosition=window.location.search.includes('mockoffice');
 
 var data;
 var swiper = undefined;

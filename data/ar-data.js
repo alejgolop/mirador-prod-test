@@ -1,4 +1,5 @@
 const ARdata = {
+  name:"Torre del Homenaje - Martos",
   mediaOrigin: "data/media/",
   mockPoints:[
     [

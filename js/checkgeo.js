@@ -1,6 +1,4 @@
 var geoPermissionStatus;
-document.title=ARdata.name;
-
 
 function noGeolocationModal() {
   Swal.fire({

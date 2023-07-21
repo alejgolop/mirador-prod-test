@@ -39,14 +39,12 @@
   <body style="margin: 0; overflow: hidden">
 
     <div class="fabs-rightup" role="group" aria-label="Floating action buttons">
-      <!-- buttons will go here -->
       <button  id="chooseLang-btn" class="btn btn-primary fab invisible" onclick="openChooseLangModal()" title="Change Language" aria-label="Change Language">
         <img aria-hidden="true" src="img/language.svg" width="32" height="32" />
       </button>
     </div>
 
     <div class="fabs" role="group" aria-label="Floating action buttons">
-      <!-- buttons will go here -->
       <button id="info-btn" class="btn btn-primary fab" onclick="openInfoModal()" title="Información" aria-label="Información">
         <img aria-hidden="true" src="img/info-btn.svg" width="32" height="32" />
       </button>
@@ -81,20 +79,9 @@
         custom-field="a-text"
       ></a-text>
 
-      <!--<a-image src="#info-icon" 
-      look-at="[gps-camera]"
-      height="20"
-      width="20"
-      clickhandler
-      gps-entity-place="latitude: 37.768925267300446; longitude: -3.7874293327331543;">
-    </a-image>-->
-
-    <a-camera  arjs-look-controls='smoothingFactor: 0.1' gps-camera="gpsMinDistance: 15;minDistance: 30;maxDistance: 2000;accelerationToMove: 1.0;" rotation-reader></a-camera>
-
+    <a-camera  arjs-look-controls='smoothingFactor: 0.1' gps-camera="gpsMinDistance: 15;minDistance: 30;maxDistance: 20000;accelerationToMove: 1.0;" rotation-reader></a-camera>
 
     </a-scene>
-
-
     <div
         id="modal-poi"
       class="modal fade"

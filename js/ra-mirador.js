@@ -109,15 +109,12 @@ function renderData() {
     var distance = turf.distance([geoUserLoc.longitude,geoUserLoc.latitude], [longitude,latitude], options);
       //alert(distance);
     
-    var scale=15;
+    var scale=1;
     var scaleSize=10;
     if(distance>2)
     {
       scale= (distance *scaleSize).toFixed(0);
     }
-    scalestr=`${scale} ${scale} ${scale}`;
-    //alert(scalestr);
-    element.setAttribute("scale", scalestr);
     element.setAttribute("size", scale);
 
     

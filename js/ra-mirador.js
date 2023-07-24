@@ -110,7 +110,7 @@ function renderData() {
       //alert(distance);
     
     var scale=1;
-    var scaleSize=100;
+    var scaleSize=10;
     if(distance>2)
     {
       scale= (distance *scaleSize).toFixed(0);
@@ -118,7 +118,6 @@ function renderData() {
     scalestr=`${scale} ${scale} ${scale}`;
     //alert(scalestr);
     element.setAttribute("scale", scalestr);
-    element.setAttribute("size", scale);
 
     
     element.setAttribute("ardataid", "" + index);

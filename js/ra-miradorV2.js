@@ -127,6 +127,16 @@ function renderData() {
       imageElement.setAttribute("width", 20);
   
    
+      let marginElement = document.createElement("a-plane");
+      marginElement.setAttribute("clickhandler", "");
+      marginElement.setAttribute("visible", "false");
+      marginElement.setAttribute("height", "70");
+      marginElement.setAttribute("width", "70");
+      marginElement.setAttribute("ardataid", "" + index);
+  
+      imageElement.appendChild(marginElement);
+
+
     element.appendChild(imageElement);
     scene.appendChild(element);
   });

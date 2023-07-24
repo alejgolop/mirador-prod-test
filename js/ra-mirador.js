@@ -105,7 +105,7 @@ function renderData() {
     var options = {units: 'kilometers'};
 
     var distance = turf.distance([geoUserLoc.longitude,geoUserLoc.latitude], [longitude,latitude], options);
-      alert(distance);
+      //alert(distance);
     
     if(distance>2)
     {

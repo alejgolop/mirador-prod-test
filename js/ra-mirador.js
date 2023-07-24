@@ -110,7 +110,7 @@ function renderData() {
       //alert(distance);
     
     var scale=1;
-    var scaleSize=10;
+    var scaleSize=100;
     if(distance>2)
     {
       scale= (distance *scaleSize).toFixed(0);

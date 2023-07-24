@@ -15,10 +15,11 @@
     <script src="lib/arjs/aframe-ar.js"></script>
     <script src="lib/arjs/aframe-extras.loaders.min.js"></script>
     <script src="lib/arjs/aframe-look-at-component.min.js"></script>
+    <script src="lib/turfjs/turf.min.js"></script>
     <script src="js/data-loader.min.js"></script>
-    <script src="js/checkgeo.min.js"></script>
+    <script src="js/checkgeo.js"></script>
     <script src="js/translate-ui.min.js"></script>
-    <script src="js/ra-mirador.min.js"></script>
+    <script src="js/ra-mirador.js"></script>
     
     <script>
       AFRAME.registerComponent("clickhandler", {
@@ -79,7 +80,7 @@
         custom-field="a-text"
       ></a-text>
 
-    <a-camera  arjs-look-controls='smoothingFactor: 0.1' gps-camera="gpsMinDistance: 15;minDistance: 30;maxDistance: 20000;accelerationToMove: 1.0;" rotation-reader></a-camera>
+    <a-camera  arjs-look-controls='smoothingFactor: 0.1' gps-camera="gpsMinDistance: 15;minDistance: 30;maxDistance: 50000;accelerationToMove: 1.0;" rotation-reader></a-camera>
 
     </a-scene>
     <div

@@ -1,4 +1,23 @@
 var geoPermissionStatus;
+var geoUserLoc=undefined;
+var hasGeoLoc=false;
+
+
+function success(pos) {
+  const crd = pos.coords;
+
+  geoUserLoc={
+    latitude:crd.latitude,
+    longitude:crd.longitude
+  }
+  hasGeoLoc=true;
+}
+
+function error(err) {
+  console.warn(`ERROR(${err.code}): ${err.message}`);
+}
+
+
 
 function noGeolocationModal() {
   Swal.fire({
@@ -35,6 +54,13 @@ async function checkGeo()
           noGeolocationModal();
           resolve(false);
         }else{
+
+          navigator.geolocation.getCurrentPosition(success, error, {
+            enableHighAccuracy: true,
+            timeout: 5000,
+            maximumAge: 0,
+          });
+          
             resolve(true);
         }
     

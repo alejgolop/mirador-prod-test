@@ -49,13 +49,24 @@ function loadData()
         data.push(processedPoi);
       });
       //data = structuredClone(ARdata.features);
-      renderData();
+      //renderData();
+      checkGeoLocInterval=setInterval(checkGeoLoc,200)
 
       //window.addEventListener( 'mouseup', onMouseClick, false );
       howTo();
     }
   });
   $('.arjs-loader').addClass('invisible');
+}
+
+var checkGeoLocInterval;
+function checkGeoLoc()
+{
+  if(hasGeoLoc)
+  {
+    clearInterval(checkGeoLocInterval);
+    renderData();
+  }
 }
 
 function howTo() {
@@ -69,6 +80,7 @@ function howTo() {
 }
 
 function renderData() {
+  console.log("rendering")
   let scene = document.querySelector("a-scene");
   data.forEach((arPoint, index) => {
     let latitude = arPoint.coordinates[1];
@@ -86,8 +98,24 @@ function renderData() {
       arPoint.iconSpot.length > 1 ? arPoint.iconSpot : "#info-icon"
     );
     element.setAttribute("look-at", "[gps-camera]");
-    element.setAttribute("height", "15");
-    element.setAttribute("width", "15");
+
+    var height=15;
+    var width=15;
+
+    var options = {units: 'kilometers'};
+
+    var distance = turf.distance([geoUserLoc.longitude,geoUserLoc.latitude], [longitude,latitude], options);
+      //alert(distance);
+    
+    if(distance>1)
+    {
+      height= height* (distance *5);
+      width= width* (distance *5)
+    }
+    
+
+    element.setAttribute("height", height);
+    element.setAttribute("width", width);
     element.setAttribute("ardataid", "" + index);
     /*element.addEventListener('click', (event) => {
             alert("Click");

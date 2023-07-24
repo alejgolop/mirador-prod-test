@@ -105,13 +105,12 @@ function renderData() {
     var options = {units: 'kilometers'};
 
     var height=15;
-    var width=45;
+    var width=15;
     var distance = turf.distance([geoUserLoc.longitude,geoUserLoc.latitude], [longitude,latitude], options);
       //alert(distance);
-      var scaleSize=10;
       if(distance>2)
       {
-        width= (width *scaleSize).toFixed(0);
+        width= 45;
       }
 
       element.setAttribute("height", width);

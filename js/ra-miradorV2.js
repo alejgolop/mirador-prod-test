@@ -104,40 +104,31 @@ function renderData() {
         `latitude: ${latitude}; longitude: ${longitude};`
       );
       element.setAttribute("clickhandler", "");
-  
-      element.setAttribute(
-        "src",
-        arPoint.iconSpot.length > 1 ? arPoint.iconSpot : "#info-icon"
-      );
+      element.setAttribute("ardataid", "" + index);
+      element.setAttribute("visible", "true");  
       element.setAttribute("look-at", "[gps-camera]");
       
 
+     
 
+    
+      let imageElement = document.createElement("a-image");
+      imageElement.setAttribute("ardataid", "" + index);
+      imageElement.setAttribute("clickhandler", "");
+
+      imageElement.setAttribute(
+        "src",
+        arPoint.iconSpot.length > 1 ? arPoint.iconSpot : "#info-icon"
+      );
+
+  
+
+      imageElement.setAttribute("height", size);
+      imageElement.setAttribute("width", size);
+
+      imageElement.setAttribute("position", "0 30 0");
    
-
-    
-    
-
-   
-
-
-    
-    element.setAttribute("ardataid", "" + index);
-    /*element.addEventListener('click', (event) => {
-            alert("Click");
-            var elem=findNameByPosition(event.target.getAttribute("ardataid"));
-            alert("You Clicked on "+elem.name+" !");
-          })*/
-
-   /*  let marginElement = document.createElement("a-plane");
-    marginElement.setAttribute("clickhandler", "");
-    marginElement.setAttribute("visible", "false");
-    marginElement.setAttribute("height", "90");
-    marginElement.setAttribute("width", "90");
-    marginElement.setAttribute("ardataid", "" + index);
-
-    element.appendChild(marginElement); */
-
+    element.appendChild(imageElement);
     scene.appendChild(element);
   });
 }

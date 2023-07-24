@@ -87,8 +87,10 @@ function renderData() {
     let longitude = arPoint.coordinates[0];
     var distance = turf.distance([geoUserLoc.longitude,geoUserLoc.latitude], [longitude,latitude], {units: 'kilometers'});
     var size=15;
+    var elevate=false;
     if(distance>2)
       {
+        elevate=true;
         size= 60;
       }
 
@@ -103,11 +105,12 @@ function renderData() {
         "gps-entity-place",
         `latitude: ${latitude}; longitude: ${longitude};`
       );
-      element.setAttribute("clickhandler", "");
-      element.setAttribute("ardataid", "" + index);
+      //element.setAttribute("clickhandler", "");
+      //element.setAttribute("ardataid", "" + index);
       element.setAttribute("visible", "true");  
       element.setAttribute("look-at", "[gps-camera]");
-      
+      element.setAttribute("color","#FF0000");
+      element.setAttribute("material","opacity: 0.0 transparent: true");
 
      
 
@@ -123,10 +126,13 @@ function renderData() {
 
   
 
-      imageElement.setAttribute("height", size);
-      imageElement.setAttribute("width", size);
-
-      imageElement.setAttribute("position", "0 30 0");
+      imageElement.setAttribute("height", size*10);
+      imageElement.setAttribute("width", size*10);
+      if(elevate)
+      {
+        imageElement.setAttribute("position", "0 30 0");
+      }
+     
    
     element.appendChild(imageElement);
     scene.appendChild(element);

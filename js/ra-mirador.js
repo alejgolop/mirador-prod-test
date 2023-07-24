@@ -85,62 +85,70 @@ function renderData() {
   data.forEach((arPoint, index) => {
     let latitude = arPoint.coordinates[1];
     let longitude = arPoint.coordinates[0];
-
-    let element = document.createElement("a-image");
-    element.setAttribute(
-      "gps-entity-place",
-      `latitude: ${latitude}; longitude: ${longitude};`
-    );
-    element.setAttribute("clickhandler", "");
-
-    element.setAttribute(
-      "src",
-      arPoint.iconSpot.length > 1 ? arPoint.iconSpot : "#info-icon"
-    );
-    element.setAttribute("look-at", "[gps-camera]");
-
-    
     
 
-    var options = {units: 'kilometers'};
 
-    var height=15;
-    var width=15;
-    var distance = turf.distance([geoUserLoc.longitude,geoUserLoc.latitude], [longitude,latitude], options);
+      let element = document.createElement("a-plane");
 
-      //alert(distance);
-      if(distance>2)
-      {
-        width= 450;
-        element.setAttribute("position", "0 30 0");
-      }
+      element.setAttribute("height", 30);
+      element.setAttribute("width", 30);
 
-      element.setAttribute("height", width);
-    element.setAttribute("width", width);
+
+      element.setAttribute(
+        "gps-entity-place",
+        `latitude: ${latitude}; longitude: ${longitude};`
+      );
+      //element.setAttribute("clickhandler", "");
+      //element.setAttribute("ardataid", "" + index);
+      element.setAttribute("visible", "true");  
+      element.setAttribute("look-at", "[gps-camera]");
+      element.setAttribute("color","#FF0000");
+      element.setAttribute("material","opacity: 0.0 transparent: true");
+
+     
 
     
-    element.setAttribute("ardataid", "" + index);
-    /*element.addEventListener('click', (event) => {
-            alert("Click");
-            var elem=findNameByPosition(event.target.getAttribute("ardataid"));
-            alert("You Clicked on "+elem.name+" !");
-          })*/
+      let imageElement = document.createElement("a-image");
+      imageElement.setAttribute("ardataid", "" + index);
+      imageElement.setAttribute("clickhandler", "");
 
-   /*  let marginElement = document.createElement("a-plane");
-    marginElement.setAttribute("clickhandler", "");
-    marginElement.setAttribute("visible", "false");
-    marginElement.setAttribute("height", "90");
-    marginElement.setAttribute("width", "90");
-    marginElement.setAttribute("ardataid", "" + index);
+      imageElement.setAttribute(
+        "src",
+        arPoint.iconSpot.length > 1 ? arPoint.iconSpot : "#info-icon"
+      );
 
-    element.appendChild(marginElement); */
+      if(arPoint.elevated>0)
+        {
+          imageElement.setAttribute("position", `0 ${arPoint.elevated*45} 0`);      
+        }
 
+
+      imageElement.setAttribute("height", 25);
+      imageElement.setAttribute("width", 25);
+  
+   
+      let marginElement = document.createElement("a-plane");
+      marginElement.setAttribute("clickhandler", "");
+      marginElement.setAttribute("visible", "false");
+      marginElement.setAttribute("height", "25");
+      marginElement.setAttribute("width", "25");
+      marginElement.setAttribute("ardataid", "" + index);
+  
+      imageElement.appendChild(marginElement);
+
+
+    element.appendChild(imageElement);
     scene.appendChild(element);
   });
 }
 
 function findNameByPosition(id) {
   return data[id];
+}
+
+function showPOIByIndex(index)
+{
+  showPOI(findNameByPosition(index));
 }
 
 function showPOI(poi) {
@@ -183,6 +191,7 @@ function showPOI(poi) {
     });
   }
 
+  $("#poi-title-img").attr("src", "");
   $("#poi-title").text(poi.name);
   $("#poi-body").empty();
   poi.brief[language.code].forEach((paragraph) => {
@@ -221,4 +230,31 @@ function openInfoModal() {
   </div>`);
 
   $("#modal-poi").modal("show");
+}
+
+function openPoiList()
+{
+  $(".swiper-wrapper").empty();
+  swiper?.destroy();
+
+  $("#poi-title-img").attr("src", "img/list-btn.svg");
+  $("#poi-title").text(langStrings[language.code]["poiList"]);
+  $("#poi-body").empty();
+
+
+  poiList=`<ul class="list-group">`;
+
+ 
+
+
+ 
+  data.forEach((arPoint, index) => {
+    poiList+=`<li class="list-group-item" onclick="showPOIByIndex(${index})">${arPoint.name}</li>`;
+    
+  });
+  poiList+=`</ul>`;
+  $("#poi-body").append(poiList);
+
+  $("#modal-poi").modal("show");
+
 }

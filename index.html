@@ -18,8 +18,8 @@
     <script src="lib/turfjs/turf.min.js"></script>
     <script src="js/data-loader.js"></script>
     <script src="js/checkgeo.js"></script>
-    <script src="js/translate-ui.min.js"></script>
-    <script src="js/ra-miradorV2.js"></script>
+    <script src="js/translate-ui.js"></script>
+    <script src="js/ra-mirador.js"></script>
     
     <script>
       AFRAME.registerComponent("clickhandler", {
@@ -42,6 +42,9 @@
     <div class="fabs-rightup" role="group" aria-label="Floating action buttons">
       <button  id="chooseLang-btn" class="btn btn-primary fab invisible" onclick="openChooseLangModal()" title="Change Language" aria-label="Change Language">
         <img aria-hidden="true" src="img/language.svg" width="32" height="32" />
+      </button>
+      <button id="poiList-btn" class="btn btn-primary fab" onclick="openPoiList()" title="Puntos de Interés" aria-label="Listado de Puntos de Interés">
+        <img aria-hidden="true" src="img/list-btn.svg" width="32" height="32" />
       </button>
     </div>
 

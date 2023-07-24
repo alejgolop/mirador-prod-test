@@ -10,6 +10,7 @@ const langStrings = {
     "ar-advise-msg":
       "Por favor, por su seguridad y un correcto funcionamiento, mantén activada la localización del dispositivo móvil y permanece en zonas al aire libre.",
     info: "Información",
+    poiList: "Puntos de Interés",
     confirmation: "Hecho",
     acknowledge: "Entendido",
     "geo-advise-title": "Activa la Geolocalización",
@@ -29,6 +30,7 @@ const langStrings = {
     "ar-advise-msg":
       "Please, for your security and a correct operation, keep the device geolocation ON and stay at outdoor areas.",
     info: "Info",
+    poiList: "Points of Interest",
     confirmation: "Done",
     acknowledge: "OK",
     "geo-advise-title": "Switch On your Device Geolocation ",
@@ -63,6 +65,11 @@ function changeLang(code) {
   $(".swal2-title").text(langStrings[language.code]["lang-title"]);
 
   $("#chooseLang-btn").attr("title", langStrings[language.code]["lang-title"]);
+
+  $("#info-btn").attr("title", langStrings[language.code]["info"]);
+  $("#poiList-btn").attr("title", langStrings[language.code]["poiList"]);
+
+
 }
 
 function openChooseLangModal() {

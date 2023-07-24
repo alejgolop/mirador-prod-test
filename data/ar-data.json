@@ -3,8 +3,8 @@
   "mediaOrigin": "data/media/",
   "mockPoints":[
     [
-      -3.7552225527849954,
-      37.7660224865486
+      -3.7753420792005796,
+      37.76877921819048
     ],
     [
       -3.7824791527849957,
@@ -39,8 +39,8 @@
       37.7674461865486
     ],
     [
-      -3.8430867527849957,
-      37.6705667865486
+      -3.7955558655432755,
+      37.762260519159405
     ],
     [
       -3.7963298527849956,
@@ -88,7 +88,8 @@
         
         
       ],
-      "coordinates": [-3.9344341, 37.7206332]
+      "coordinates": [-3.9344341, 37.7206332],
+      "elevated":true
     },
     {
       "iconSpot": "icons/parque anillo.png",
@@ -109,7 +110,9 @@
         "images/parque anillo/faro y vigia tercer obsequio.jpg",
         "images/parque anillo/historia y naturaleza primer obsequio.jpg"
       ],
-      "coordinates": [-3.9616907, 37.7253951]
+      "coordinates": [-3.9616907, 37.7253951],
+      "elevated":false
+      
     },
     {
       "iconSpot": "icons/santa marta.png",
@@ -135,7 +138,8 @@
         "images/santa marta/1656573775474.jpg"
         
       ],
-      "coordinates": [-3.9649684, 37.7229272]
+      "coordinates": [-3.9649684, 37.7229272],
+      "elevated":false
     },
     {
       "iconSpot": "icons/san amador y santa ana.png",
@@ -158,7 +162,8 @@
         "images/san amador y santa ana/IMG_20210428_093759.jpg",
         "images/san amador y santa ana/IMG_20210504_093744.jpg"
       ],
-      "coordinates": [-3.9636451, 37.7245476]
+      "coordinates": [-3.9636451, 37.7245476],
+      "elevated":false
     },
     {
       "iconSpot": "icons/la peña.png",
@@ -179,7 +184,8 @@
         "images/la peña/11 Alfombra a los pies.jpg",
         "images/la peña/IMG_20210214_105010.jpg"
       ],
-      "coordinates": [-3.9608503, 37.7181362]
+      "coordinates": [-3.9608503, 37.7181362],
+      "elevated":true
     },
     {
       "iconSpot": "icons/torre almedina.png",
@@ -203,7 +209,8 @@
         "images/torre almedina/IMG-20230307-WA0050.jpg",
         "images/torre almedina/IMG_20210416_103837 (2).jpg"
       ],
-      "coordinates": [-3.9663184, 37.7234728]
+      "coordinates": [-3.9663184, 37.7234728],
+      "elevated":false
     },
     {
       "iconSpot": "icons/ayuntamiento.png",
@@ -225,7 +232,8 @@
         "images/ayuntamiento/IMG_20210603_102903.jpg",
         "images/ayuntamiento/IMG_20210603_103000.jpg"
       ],
-      "coordinates": [-3.9658571, 37.7229647]
+      "coordinates": [-3.9658571, 37.7229647],
+      "elevated":false
     },
     {
       "iconSpot": "icons/trinitarias.png",
@@ -245,7 +253,8 @@
       "media": [
         "images/trinitarias/IMG_20210407_114654.jpg"
       ],
-      "coordinates": [-3.9661759, 37.7228711]
+      "coordinates": [-3.9661759, 37.7228711],
+      "elevated":false
     },
     {
       "iconSpot": "icons/artes y oficios.png",
@@ -268,7 +277,8 @@
         "images/artes y oficios/1689586545409.jpg",
         "images/artes y oficios/1689586545448.jpg"
       ],
-      "coordinates": [-3.9682868, 37.7220569]
+      "coordinates": [-3.9682868, 37.7220569],
+      "elevated":false
     },
     {
       "iconSpot": "icons/caracolera.png",
@@ -287,7 +297,8 @@
         "images/caracolera/miradorastron.jpg",
         "images/caracolera/víboras.jpg"
       ],
-      "coordinates": [-4.0222983, 37.6251775]
+      "coordinates": [-4.0222983, 37.6251775],
+      "elevated":true
     },
     {
       "iconSpot": "icons/teatro.png",
@@ -309,7 +320,8 @@
         "images/teatro/IMG_3180.jpg",
         "images/teatro/PHOTO-2023-04-23-12-20-36.jpg"
       ],
-      "coordinates": [-3.9755414, 37.7182974]
+      "coordinates": [-3.9755414, 37.7182974],
+      "elevated":true
     },
     {
       "iconSpot": "icons/santuario virgen villa.png",
@@ -332,7 +344,8 @@
         "images/santuario virgen villa/IMG_20211118_133014.jpg",
         "images/santuario virgen villa/IMG_20210413_112118.jpg"
       ],
-      "coordinates": [-3.9686508, 37.7233511]
+      "coordinates": [-3.9686508, 37.7233511],
+      "elevated":false
     },
     {
       "iconSpot": "icons/ermita san bartolome.png",
@@ -358,7 +371,8 @@
         "images/ermita san bartolome/IMG_20200217_124532.jpg",
         "images/ermita san bartolome/IMG_20210319_094215.jpg"
       ],
-      "coordinates": [-3.9661168, 37.7199302]
+      "coordinates": [-3.9661168, 37.7199302],
+      "elevated":false
     },
     {
       "iconSpot": "icons/cultura francisco.png",
@@ -378,7 +392,8 @@
         "images/cultura francisco/IMG_2700.jpg",
         "images/cultura francisco/Tercer Premio - Cultura y naturaleza - Francisco J. Martos Armenteros.jpg"
       ],
-      "coordinates": [-3.9726386, 37.7182603]
+      "coordinates": [-3.9726386, 37.7182603],
+      "elevated":false
     },
     {
       "iconSpot": "icons/calvario.png",
@@ -397,7 +412,8 @@
         "images/calvario/IMG_20210525_100401.jpg",
         "images/calvario/IMG_20210319_094215.jpg"
       ],
-      "coordinates": [-3.9657346, 37.7189733]
+      "coordinates": [-3.9657346, 37.7189733],
+      "elevated":false
     }
   ]
 }

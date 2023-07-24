@@ -90,8 +90,8 @@ function renderData() {
 
       let element = document.createElement("a-plane");
 
-      element.setAttribute("height", 15);
-      element.setAttribute("width", 15);
+      element.setAttribute("height", 25);
+      element.setAttribute("width", 25);
 
 
       element.setAttribute(
@@ -117,16 +117,17 @@ function renderData() {
         arPoint.iconSpot.length > 1 ? arPoint.iconSpot : "#info-icon"
       );
 
-  
-      var distance = turf.distance([geoUserLoc.longitude,geoUserLoc.latitude], [longitude,latitude], {units: 'kilometers'});
-      if(distance>2)
+      if(arPoint.elevated)
         {
+          element.setAttribute("position", "0 45 0");
           imageElement.setAttribute("position", "0 45 0");
+
+      
         }
 
 
-      imageElement.setAttribute("height", 15);
-      imageElement.setAttribute("width", 15);
+      imageElement.setAttribute("height", 25);
+      imageElement.setAttribute("width", 25);
   
    
     element.appendChild(imageElement);

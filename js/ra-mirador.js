@@ -101,21 +101,23 @@ function renderData() {
 
     var height=15;
     var width=15;
+    element.setAttribute("height", height);
+    element.setAttribute("width", width);
 
     var options = {units: 'kilometers'};
 
     var distance = turf.distance([geoUserLoc.longitude,geoUserLoc.latitude], [longitude,latitude], options);
       //alert(distance);
     
+    var scale=1;
+    var scaleSize=6;
     if(distance>2)
     {
-      height= height* (distance *10);
-      width= width* (distance *10)
+      scale= distance *scaleSize;
     }
-    
+    element.setAttribute("scale", `${scale} ${scale} ${scale}`);
 
-    element.setAttribute("height", height);
-    element.setAttribute("width", width);
+    
     element.setAttribute("ardataid", "" + index);
     /*element.addEventListener('click', (event) => {
             alert("Click");

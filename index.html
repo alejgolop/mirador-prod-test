@@ -65,6 +65,7 @@
     <a-assets timeout="10000">
       <img id="info-icon" src="img/info-ar.png" scale="1 1 1">
     </a-assets>
+    <a-camera look-controls-enabled='false' arjs-device-orientation-controls='smoothingFactor: 0.1' gps-new-camera='gpsMinDistance: 15'></a-camera>
 
         <a-text
         clickhandler
@@ -75,13 +76,12 @@
         anchor="center"
         look-at="[gps-camera]"
         scale="10 10 10"
-        gps-entity-place="latitude: 37.769535897409874; longitude: -3.7888669967651367;"
+        gps-new-entity-place="latitude: 37.769535897409874; longitude: -3.7888669967651367;"
         custom-field="a-text"
       ></a-text>
 
 
 
-      <a-camera look-controls-enabled='false' arjs-device-orientation-controls='smoothingFactor: 0.1' gps-new-camera='gpsMinDistance: 15'></a-camera>
       <a-entity look-at="[gps-camera]" clickhandler ardataid="1" material='color: red' geometry='primitive: box' gps-new-entity-place="latitude: 37.76376029752916; longitude:-3.7915549084011104" scale="10 10 10"></a-entity>
 
 

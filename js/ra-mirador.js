@@ -133,8 +133,18 @@ function renderData() {
         }
 
 
-      imageElement.setAttribute("height", 25);
-      imageElement.setAttribute("width", 25);
+     
+
+      if(index==4)
+      {
+        imageElement.setAttribute("height", 17);
+        imageElement.setAttribute("width", 17);
+
+      }else{
+        imageElement.setAttribute("height", 25);
+        imageElement.setAttribute("width", 25);
+
+      }
   
    
       let marginElement = document.createElement("a-plane");

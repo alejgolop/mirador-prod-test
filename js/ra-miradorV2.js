@@ -90,8 +90,8 @@ function renderData() {
 
       let element = document.createElement("a-plane");
 
-      element.setAttribute("height", 25);
-      element.setAttribute("width", 25);
+      element.setAttribute("height", 30);
+      element.setAttribute("width", 30);
 
 
       element.setAttribute(
@@ -130,8 +130,8 @@ function renderData() {
       let marginElement = document.createElement("a-plane");
       marginElement.setAttribute("clickhandler", "");
       marginElement.setAttribute("visible", "false");
-      marginElement.setAttribute("height", "70");
-      marginElement.setAttribute("width", "70");
+      marginElement.setAttribute("height", "30");
+      marginElement.setAttribute("width", "30");
       marginElement.setAttribute("ardataid", "" + index);
   
       imageElement.appendChild(marginElement);

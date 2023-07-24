@@ -174,7 +174,7 @@ function showPOI(poi) {
       var newElem;
       if ([".mp4", ".webm", ".avi"].includes(extension)) {
         // Is a Video
-        newElem = `<div class="swiper-slide"><video controls><source src="${media}" type="video/mp4"></video></div>`;
+        newElem = `<div class="swiper-slide"><video class="video-info" controls><source src="${media}" type="video/mp4"></video></div>`;
       } else {
         // Is an Image
         newElem = `<div class="swiper-slide"><div class="swiper-zoom-container"><img src="${media}" title="${mediaTitle}" alt="${mediaTitle}"></div></div>`;
@@ -217,7 +217,7 @@ function showPOI(poi) {
 }
 
 function stopVideos() {
-  var videos = document.getElementsByTagName("video");
+  var videos = document.getElementsByClassName("video-info");
   for (let video of videos) {
     video.pause();
     video.currentTime = 0;

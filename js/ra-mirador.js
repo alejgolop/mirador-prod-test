@@ -91,7 +91,7 @@ function renderData() {
       let element = document.createElement("a-plane");
 
 
-      if(index==5)
+      if(index==4)
       {
         element.setAttribute("height", 15);
       element.setAttribute("width", 15);

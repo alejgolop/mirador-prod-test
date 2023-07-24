@@ -90,7 +90,7 @@
       ],
       "coordinates": [-3.9344341, 37.7206332],
       "elevated":2,
-      "size":1
+      "size":2
     },
     {
       "iconSpot": "icons/parque anillo.png",
@@ -113,7 +113,7 @@
       ],
       "coordinates": [-3.9616907, 37.7253951],
       "elevated":1,
-      "size":1
+      "size":2
       
     },
     {
@@ -142,7 +142,7 @@
       ],
       "coordinates": [-3.9649684, 37.7229272],
       "elevated":1,
-      "size":0.2
+      "size":0.5
     },
     {
       "iconSpot": "icons/san amador y santa ana.png",
@@ -167,7 +167,7 @@
       ],
       "coordinates": [-3.9636451, 37.7245476],
       "elevated":0,
-      "size":1
+      "size":1.5
     },
     {
       "iconSpot": "icons/la peña.png",
@@ -190,7 +190,7 @@
       ],
       "coordinates": [-3.9608503, 37.7181362],
       "elevated":2,
-      "size":1
+      "size":2
     },
     {
       "iconSpot": "icons/torre almedina.png",
@@ -216,7 +216,7 @@
       ],
       "coordinates": [-3.9663184, 37.7234728],
       "elevated":0,
-      "size":1
+      "size":0.16
     },
     {
       "iconSpot": "icons/ayuntamiento.png",
@@ -357,7 +357,7 @@
       ],
       "coordinates": [-3.9686508, 37.7233511],
       "elevated":0,
-      "size":0.4
+      "size":0.6
     },
     {
       "iconSpot": "icons/ermita san bartolome.png",
@@ -385,7 +385,7 @@
       ],
       "coordinates": [-3.9661168, 37.7199302],
       "elevated":0,
-      "size":1
+      "size":1.5
     },
     {
       "iconSpot": "icons/cultura francisco.png",

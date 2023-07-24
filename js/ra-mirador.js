@@ -108,10 +108,11 @@ function renderData() {
     var width=15;
     var distance = turf.distance([geoUserLoc.longitude,geoUserLoc.latitude], [longitude,latitude], options);
 
-      alert(distance);
+      //alert(distance);
       if(distance>2)
       {
-        width= 45;
+        width= 450;
+        element.setAttribute("position", "0 30 0");
       }
 
       element.setAttribute("height", width);

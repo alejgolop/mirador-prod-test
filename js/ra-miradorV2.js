@@ -119,16 +119,14 @@ function renderData() {
 
   
       var distance = turf.distance([geoUserLoc.longitude,geoUserLoc.latitude], [longitude,latitude], {units: 'kilometers'});
-      var size=15;
       if(distance>2)
         {
-          size= 150;
           imageElement.setAttribute("position", "0 45 0");
         }
 
 
-      imageElement.setAttribute("height", size);
-      imageElement.setAttribute("width", size);
+      imageElement.setAttribute("height", 15);
+      imageElement.setAttribute("width", 15);
   
    
     element.appendChild(imageElement);

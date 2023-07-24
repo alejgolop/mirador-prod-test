@@ -93,8 +93,8 @@ function renderData() {
 
       if(index==5)
       {
-        element.setAttribute("height", 15);
-      element.setAttribute("width", 15);
+        element.setAttribute("height", 7);
+      element.setAttribute("width", 7);
 
       }else{
         element.setAttribute("height", 30);
@@ -138,8 +138,8 @@ function renderData() {
       if(index==5)
       {
         console.log(arPoint.name)
-        imageElement.setAttribute("height", 17);
-        imageElement.setAttribute("width", 17);
+        imageElement.setAttribute("height", 8);
+        imageElement.setAttribute("width", 8);
 
       }else{
         imageElement.setAttribute("height", 25);

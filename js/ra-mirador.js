@@ -19,42 +19,10 @@ window.onload = () => {
  */
   //No Internalization
   changeLang(language.code);
-  loadDataV2();
+  loadData();
   
 };
 
-async function loadDataV2()
-{
-  await loadARData();  
-  data = [];
-  ARdata.pois.forEach((poi,index) => {
-    var processedPoi = structuredClone(poi);
-    if(mockPosition)
-    {
-      processedPoi.coordinates=ARdata.mockPointsOFFICE[index];
-    }
-
-    
-    var procMedia = [];
-    processedPoi.media.forEach((mediaItem) => {
-      procMedia.push(ARdata.mediaOrigin + mediaItem);
-    });
-
-    if (processedPoi.iconSpot.length > 1) {
-      processedPoi.iconSpot = ARdata.mediaOrigin + processedPoi.iconSpot;
-    }
-
-    processedPoi.media = procMedia;
-    data.push(processedPoi);
-  });
-  //data = structuredClone(ARdata.features);
-  //renderData();
-  checkGeoLocInterval=setInterval(checkGeoLoc,200)
-
-  //window.addEventListener( 'mouseup', onMouseClick, false );
-  howTo();
-  $('.arjs-loader').addClass('invisible');
-}
 
 function loadData()
 {

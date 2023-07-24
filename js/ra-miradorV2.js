@@ -119,10 +119,7 @@ function renderData() {
 
       if(arPoint.elevated)
         {
-          element.setAttribute("position", "0 45 0");
-          imageElement.setAttribute("position", "0 45 0");
-
-      
+          imageElement.setAttribute("position", "0 45 0");      
         }
 
 

@@ -142,7 +142,7 @@
       ],
       "coordinates": [-3.9649684, 37.7229272],
       "elevated":1,
-      "size":0.5
+      "size":0.65
     },
     {
       "iconSpot": "icons/san amador y santa ana.png",
@@ -216,7 +216,7 @@
       ],
       "coordinates": [-3.9663184, 37.7234728],
       "elevated":0,
-      "size":0.16
+      "size":0.3
     },
     {
       "iconSpot": "icons/ayuntamiento.png",
@@ -308,7 +308,7 @@
       ],
       "coordinates": [-4.0222983, 37.6251775],
       "elevated":1,
-      "size":1
+      "size":2.5
     },
     {
       "iconSpot": "icons/teatro.png",
@@ -332,7 +332,7 @@
       ],
       "coordinates": [-3.9755414, 37.7182974],
       "elevated":1,
-      "size":1
+      "size":2.5
     },
     {
       "iconSpot": "icons/santuario virgen villa.png",
@@ -407,7 +407,7 @@
       ],
       "coordinates": [-3.9726386, 37.7182603],
       "elevated":0,
-      "size":1
+      "size":2.5
     },
     {
       "iconSpot": "icons/calvario.png",
@@ -428,7 +428,7 @@
       ],
       "coordinates": [-3.9657346, 37.7189733],
       "elevated":1,
-      "size":1
+      "size":1.7
     }
   ]
 }

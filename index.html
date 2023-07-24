@@ -61,10 +61,17 @@
       <div class="arjs-loader invisible">
       <div></div>
     </div>
-    <a-scene 
+    <!-- <a-scene 
     cursor="rayOrigin: mouse;" raycaster="objects: [clickhandler];near: 0; far: 50000;" 
      vr-mode-ui='enabled: false' 
-     arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;">
+     arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;"> -->
+
+     <a-scene
+        vr-mode-ui="enabled: false"
+        cursor='rayOrigin: mouse'
+        raycaster='objects: [clickhandler];near: 0; far: 50000'
+        arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false;'
+        renderer='antialias: true; alpha: true'>
 
     <a-assets timeout="10000">
       <img id="info-icon" src="img/info-ar.png" scale="1 1 1">
@@ -97,7 +104,6 @@
       role="dialog"
       aria-labelledby="myLargeModalLabel"
       aria-hidden="true"
-      data-backdrop="false"
     >
       <div class="modal-dialog modal-lg">
         <div class="modal-content">

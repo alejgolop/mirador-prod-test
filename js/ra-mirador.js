@@ -91,7 +91,7 @@ function renderData() {
       let element = document.createElement("a-plane");
 
 
-      if(index==4)
+      if(index==5)
       {
         element.setAttribute("height", 15);
       element.setAttribute("width", 15);
@@ -135,8 +135,9 @@ function renderData() {
 
      
 
-      if(index==4)
+      if(index==5)
       {
+        console.log(arPoint.name)
         imageElement.setAttribute("height", 17);
         imageElement.setAttribute("width", 17);
 

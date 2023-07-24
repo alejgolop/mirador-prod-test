@@ -117,14 +117,14 @@ function renderData() {
         arPoint.iconSpot.length > 1 ? arPoint.iconSpot : "#info-icon"
       );
 
-      if(arPoint.elevated)
+      if(arPoint.elevated>0)
         {
-          imageElement.setAttribute("position", "0 45 0");      
+          imageElement.setAttribute("position", `0 ${arPoint.elevated*45} 0`);      
         }
 
 
-      imageElement.setAttribute("height", 25);
-      imageElement.setAttribute("width", 25);
+      imageElement.setAttribute("height", 20);
+      imageElement.setAttribute("width", 20);
   
    
     element.appendChild(imageElement);

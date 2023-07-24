@@ -148,7 +148,10 @@ function findNameByPosition(id) {
 
 function showPOIByIndex(index)
 {
+  $(".modal-body").animate({ scrollTop: 0 }, "fast");
   showPOI(findNameByPosition(index));
+
+  //showPOI(findNameByPosition(index));
 }
 
 function showPOI(poi) {

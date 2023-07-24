@@ -99,25 +99,23 @@ function renderData() {
     );
     element.setAttribute("look-at", "[gps-camera]");
 
-    var height=15;
-    var width=15;
-    element.setAttribute("height", height);
-    element.setAttribute("width", width);
+    
+    
 
     var options = {units: 'kilometers'};
 
+    var height=15;
+    var width=15;
     var distance = turf.distance([geoUserLoc.longitude,geoUserLoc.latitude], [longitude,latitude], options);
       //alert(distance);
-    
-    var scale=1;
-    var scaleSize=100;
-    if(distance>2)
-    {
-      scale= (distance *scaleSize).toFixed(0);
-    }
-    scalestr=`${scale} ${scale} ${scale}`;
-    //alert(scalestr);
-    element.setAttribute("scale", scalestr);
+      var scaleSize=10;
+      if(distance>2)
+      {
+        width= (width *scaleSize).toFixed(0);
+      }
+
+      element.setAttribute("height", width);
+    element.setAttribute("width", width);
 
     
     element.setAttribute("ardataid", "" + index);

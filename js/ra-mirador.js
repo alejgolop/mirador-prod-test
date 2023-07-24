@@ -79,6 +79,9 @@ function howTo() {
   });
 }
 
+var elementSize=30;
+var imageSize=25;
+
 function renderData() {
   console.log("rendering")
   let scene = document.querySelector("a-scene");
@@ -91,16 +94,8 @@ function renderData() {
       let element = document.createElement("a-plane");
 
 
-      if(index==5)
-      {
-        element.setAttribute("height", 7);
-      element.setAttribute("width", 7);
-
-      }else{
-        element.setAttribute("height", 30);
-      element.setAttribute("width", 30);
-
-      }
+      element.setAttribute("height", arPoint.size*elementSize);
+      element.setAttribute("width", arPoint.size*elementSize);
 
       
 
@@ -134,25 +129,17 @@ function renderData() {
 
 
      
+        imageElement.setAttribute("height", arPoint.size*imageSize);
+        imageElement.setAttribute("width", arPoint.size*imageSize);
 
-      if(index==5)
-      {
-        console.log(arPoint.name)
-        imageElement.setAttribute("height", 8);
-        imageElement.setAttribute("width", 8);
-
-      }else{
-        imageElement.setAttribute("height", 25);
-        imageElement.setAttribute("width", 25);
-
-      }
+    
   
    
       let marginElement = document.createElement("a-plane");
       marginElement.setAttribute("clickhandler", "");
       marginElement.setAttribute("visible", "false");
-      marginElement.setAttribute("height", "25");
-      marginElement.setAttribute("width", "25");
+      marginElement.setAttribute("height",  arPoint.size*imageSize);
+      marginElement.setAttribute("width",  arPoint.size*imageSize);
       marginElement.setAttribute("ardataid", "" + index);
   
       imageElement.appendChild(marginElement);

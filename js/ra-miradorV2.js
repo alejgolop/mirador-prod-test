@@ -123,15 +123,15 @@ function renderData() {
         }
 
 
-      imageElement.setAttribute("height", 20);
-      imageElement.setAttribute("width", 20);
+      imageElement.setAttribute("height", 25);
+      imageElement.setAttribute("width", 25);
   
    
       let marginElement = document.createElement("a-plane");
       marginElement.setAttribute("clickhandler", "");
       marginElement.setAttribute("visible", "false");
-      marginElement.setAttribute("height", "30");
-      marginElement.setAttribute("width", "30");
+      marginElement.setAttribute("height", "25");
+      marginElement.setAttribute("width", "25");
       marginElement.setAttribute("ardataid", "" + index);
   
       imageElement.appendChild(marginElement);

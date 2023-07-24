@@ -32,7 +32,7 @@ function loadData()
         var processedPoi = structuredClone(poi);
         if(mockPosition)
         {
-          processedPoi.coordinates=ARdata.mockPoints[index];
+          processedPoi.coordinates=ARdata.mockPointsHOME[index];
         }
 
         

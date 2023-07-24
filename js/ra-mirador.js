@@ -90,9 +90,19 @@ function renderData() {
 
       let element = document.createElement("a-plane");
 
-      element.setAttribute("height", 30);
+
+      if(index==5)
+      {
+        element.setAttribute("height", 15);
+      element.setAttribute("width", 15);
+
+      }else{
+        element.setAttribute("height", 30);
       element.setAttribute("width", 30);
 
+      }
+
+      
 
       element.setAttribute(
         "gps-entity-place",

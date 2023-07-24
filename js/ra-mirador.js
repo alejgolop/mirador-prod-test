@@ -95,14 +95,14 @@ function renderData() {
             alert("You Clicked on "+elem.name+" !");
           })*/
 
-    let marginElement = document.createElement("a-plane");
+   /*  let marginElement = document.createElement("a-plane");
     marginElement.setAttribute("clickhandler", "");
     marginElement.setAttribute("visible", "false");
     marginElement.setAttribute("height", "90");
     marginElement.setAttribute("width", "90");
     marginElement.setAttribute("ardataid", "" + index);
 
-    element.appendChild(marginElement);
+    element.appendChild(marginElement); */
 
     scene.appendChild(element);
   });

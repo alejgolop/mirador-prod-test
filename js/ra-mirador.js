@@ -100,13 +100,13 @@ function renderData() {
       
 
       element.setAttribute(
-        "gps-entity-place",
+        "gps-new-entity-place",
         `latitude: ${latitude}; longitude: ${longitude};`
       );
       //element.setAttribute("clickhandler", "");
       //element.setAttribute("ardataid", "" + index);
       element.setAttribute("visible", "true");  
-      element.setAttribute("look-at", "[gps-camera]");
+      element.setAttribute("look-at", "[gps-new-camera]");
       element.setAttribute("color","#FF0000");
       element.setAttribute("material","opacity: 0.0 transparent: true");
 
@@ -156,7 +156,7 @@ function findNameByPosition(id) {
 
 function showPOIByIndex(index)
 {
-  $(".modal-body").animate({ scrollTop: 0 }, "fast");
+  //$(".modal-body").animate({ scrollTop: 0 }, "fast");
   showPOI(findNameByPosition(index));
 
   //showPOI(findNameByPosition(index));

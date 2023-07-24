@@ -92,4 +92,5 @@
     color:white;
   }
 
- 
+
+  .modal-backdrop { opacity: 0 !important; }

@@ -85,20 +85,13 @@ function renderData() {
   data.forEach((arPoint, index) => {
     let latitude = arPoint.coordinates[1];
     let longitude = arPoint.coordinates[0];
-    var distance = turf.distance([geoUserLoc.longitude,geoUserLoc.latitude], [longitude,latitude], {units: 'kilometers'});
-    var size=15;
-    var elevate=false;
-    if(distance>2)
-      {
-        elevate=true;
-        size= 60;
-      }
+    
 
 
       let element = document.createElement("a-plane");
 
-      element.setAttribute("height", size);
-      element.setAttribute("width", size);
+      element.setAttribute("height", 15);
+      element.setAttribute("width", 15);
 
 
       element.setAttribute(
@@ -125,14 +118,18 @@ function renderData() {
       );
 
   
+      var distance = turf.distance([geoUserLoc.longitude,geoUserLoc.latitude], [longitude,latitude], {units: 'kilometers'});
+      var size=15;
+      if(distance>2)
+        {
+          size= 150;
+          imageElement.setAttribute("position", "0 45 0");
+        }
 
-      imageElement.setAttribute("height", size*10);
-      imageElement.setAttribute("width", size*10);
-      if(elevate)
-      {
-        imageElement.setAttribute("position", "0 30 0");
-      }
-     
+
+      imageElement.setAttribute("height", size);
+      imageElement.setAttribute("width", size);
+  
    
     element.appendChild(imageElement);
     scene.appendChild(element);

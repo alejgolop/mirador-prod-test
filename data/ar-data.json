@@ -89,8 +89,8 @@
         
       ],
       "coordinates": [-3.9344341, 37.7206332],
-      "elevated":2,
-      "size":6
+      "elevated":3,
+      "size":8
     },
     {
       "iconSpot": "icons/parque anillo.png",
@@ -112,7 +112,7 @@
         "images/parque anillo/historia y naturaleza primer obsequio.jpg"
       ],
       "coordinates": [-3.9616907, 37.7253951],
-      "elevated":1,
+      "elevated":2,
       "size":2
       
     },
@@ -190,7 +190,7 @@
       ],
       "coordinates": [-3.9608503, 37.7181362],
       "elevated":2,
-      "size":4
+      "size":3
     },
     {
       "iconSpot": "icons/torre almedina.png",
@@ -427,7 +427,7 @@
         "images/calvario/IMG_20210319_094215.jpg"
       ],
       "coordinates": [-3.9657346, 37.7189733],
-      "elevated":1.5,
+      "elevated":3,
       "size":1.7
     }
   ]

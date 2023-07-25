@@ -67,8 +67,7 @@
         vr-mode-ui="enabled: false"
         cursor='rayOrigin: mouse'
         raycaster='objects: [clickhandler];near: 0; far: 50000'
-        embedded
-        arjs='sourceType: webcam; videoTexture: false; debugUIEnabled: false;'
+        arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false;'
         renderer='antialias: true; alpha:true'
        >
        
@@ -150,12 +149,15 @@
     </div>
     <script>
      
-    /*  addEventListener("resize", (event) => {
-       console.log("resize")
-      document.querySelector('video').setAttribute('style', 'width: 100vw;height: 100vh;object-fit: cover;position: absolute;top: 0;left: 0;');
+    addEventListener("resize", (event) => {
 
+      
+      var cam=document.querySelector("[camera]");
+      //console.log("W: "+window.innerWidth);
+      //console.log("H: "+window.innerHeight);
+        cam.setAttribute("camera", "fov", window.innerWidth>window.innerHeight?45:61);
      });
- */
+ 
      
 
     </script>

@@ -117,7 +117,7 @@
       aria-labelledby="myLargeModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog modal-lg">
+      <div id="modal-dialog" class="modal-dialog modal-fullscreen">
         <div class="modal-content">
           <div class="modal-header bg-primary text-light">
             <img id="poi-title-img" class="modal-title-img" src=""><h4 class="modal-title"><span id="poi-title"></span></h4>
@@ -148,14 +148,13 @@
       </div>
     </div>
     <script>
-     
+     var landscape=false;
     addEventListener("resize", (event) => {
-
-      
       var cam=document.querySelector("[camera]");
       //console.log("W: "+window.innerWidth);
       //console.log("H: "+window.innerHeight);
-        cam.setAttribute("camera", "fov", window.innerWidth>window.innerHeight?45:61);
+      landscape=window.innerWidth>window.innerHeight;
+        cam.setAttribute("camera", "fov", landscape?45:61);
      });
  
      

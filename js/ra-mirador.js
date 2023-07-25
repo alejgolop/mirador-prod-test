@@ -2,6 +2,7 @@
 const mockPosition=window.location.search.includes('mockoffice');
 
 
+
 var data;
 var swiper = undefined;
 
@@ -168,6 +169,16 @@ function showPOIByIndex(index)
 }
 
 function showPOI(poi) {
+  console.log(landscape)
+  if(landscape){
+    $(".modal-dialog").addClass("modal-fullscreen");
+    $(".modal-dialog").removeClass("modal-xl");
+  }else{
+    $(".modal-dialog").removeClass("modal-fullscreen");
+    $(".modal-dialog").addClass("modal-xl");
+  }
+
+
   $(".swiper-wrapper").empty();
   swiper?.destroy();
 

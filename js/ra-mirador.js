@@ -50,11 +50,12 @@ function loadData()
         data.push(processedPoi);
       });
       //data = structuredClone(ARdata.features);
-      renderData();
+     
       //checkGeoLocInterval=setInterval(checkGeoLoc,200)
 
       //window.addEventListener( 'mouseup', onMouseClick, false );
       howTo();
+      renderData();
     }
   });
   $('.arjs-loader').addClass('invisible');

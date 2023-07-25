@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="lib/bootstrap-5.0.1/css/bootstrap.min.css" />
@@ -146,6 +147,17 @@
         </div>
       </div>
     </div>
+    <script>
+     
+     addEventListener("resize", (event) => {
+       console.log("resize")
+      document.querySelector('video').setAttribute('style', 'width: 100vw;height: 100vh;object-fit: cover;position: absolute;top: 0;left: 0;');
+
+     });
+
+     
+
+    </script>
 
     <script src="lib/popperjs-2.9.2/popper.min.js"></script>
     <script src="lib/jquery-3.6.0/jquery-3.6.0.min.js"></script>

@@ -1,7 +1,7 @@
 
 const mockPosition=window.location.search.includes('mockoffice');
 
-var aframebox = document.getElementsByClassName('aframebox')[0];
+/* var aframebox = document.getElementsByClassName('aframebox')[0];
 setInterval(function(){
     var w = window.innerWidth;
     var h = window.innerHeight;
@@ -9,7 +9,7 @@ setInterval(function(){
        aframebox.style.height = h;
        aframebox.style.width = w;
    }
-},1);
+},1); */
 
 var data;
 var swiper = undefined;

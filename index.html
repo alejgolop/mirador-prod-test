@@ -1,168 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="lib/bootstrap-5.0.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="lib/bootstrap-5.0.1/css/bootstrap.flatly.min.css" />
-    <link rel="stylesheet" href="lib/swipper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/fab.min.css">
-    <link rel="stylesheet" href="css/ra-mirador.min.css">
+<head>
+<title>AR.js A-Frame Location-based</title>
+<script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+<script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-threex-location-only.js'></script>
+<script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>
+<script>
+    AFRAME.registerComponent("clickhandler", {
+      init: function () {
+        this.el.addEventListener("click", () => {
+         alert("HI!");
 
-
-
-    <script src="lib/ar.js 3.4.5/aframe 1.3.0/aframe.min.js"></script>
-<script type='text/javascript' src='lib/ar.js 3.4.5/ar-threex-location-only.js'></script>
-<script type='text/javascript' src='lib/ar.js 3.4.5/aframe-ar.js'></script>
-<script type='text/javascript' src='lib/ar.js 3.4.5/aframe-look-at-component.min.js'></script>
-
-    <script src="js/data-loader.js"></script>
-    <script src="js/checkgeo.js"></script>
-    <script src="js/translate-ui.js"></script>
-    <script src="js/ra-mirador.js"></script>
-    
-    <script>
-      AFRAME.registerComponent("clickhandler", {
-        init: function () {
-          this.el.addEventListener("click", () => {
-            var elem=findNameByPosition(this.el.getAttribute("ardataid"));
-            if(elem)
-            {
-              showPOI(elem);
-            }
-
-          });
-        },
-      });
-    </script>
-  </head>
-
-  <body style="margin: 0; overflow: hidden">
-
-    <div class="fabs-rightup" role="group" aria-label="Floating action buttons">
-      <button  id="chooseLang-btn" class="btn btn-primary fab invisible" onclick="openChooseLangModal()" title="Change Language" aria-label="Change Language">
-        <img aria-hidden="true" src="img/language.svg" width="32" height="32" />
-      </button>
-      <button id="poiList-btn" class="btn btn-primary fab" onclick="openPoiList()" title="Puntos de Interés" aria-label="Listado de Puntos de Interés">
-        <img aria-hidden="true" src="img/list-btn.svg" width="32" height="32" />
-      </button>
-    </div>
-
-    <div class="fabs" role="group" aria-label="Floating action buttons">
-      <button id="info-btn" class="btn btn-primary fab" onclick="openInfoModal()" title="Información" aria-label="Información">
-        <img aria-hidden="true" src="img/info-btn.svg" width="32" height="32" />
-      </button>
-     
-    </div>
-
-      <div class="arjs-loader invisible">
-      <div></div>
-    </div>
-
-     <a-scene
-      
-        vr-mode-ui="enabled: false"
-        cursor='rayOrigin: mouse'
-        raycaster='objects: [clickhandler];near: 0; far: 50000'
-        arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false;'
-        renderer='antialias: true; alpha:true'
-       >
-       
-       <!-- renderer='antialias: true; alpha: true' -->
-
-    <a-assets timeout="10000">
-      <img id="info-icon" src="img/info-ar.png" scale="1 1 1">
-    </a-assets>
-
-    <!--OFICINA-->
-
-   
-   <a-camera look-controls-enabled='false' arjs-device-orientation-controls='smoothingFactor: 0.1' gps-new-camera='simulateLatitude: 37.76908003920188;simulateLongitude: -3.7880128181942325;gpsMinDistance: 15'></a-camera>
-
-
-
-        <!--TORRE-->
-<!--   
-    <a-camera look-controls-enabled='false' arjs-device-orientation-controls='smoothingFactor: 0.1' gps-new-camera='simulateLatitude:37.723689190362336;simulateLongitude:-3.9672218232567786;gpsMinDistance: 15'></a-camera>
- -->
-
-
-        <a-text
-        clickhandler
-        value="TEST"
-        font= "fonts/verdana.fnt"
-        fontImage= "fonts/verdana.png"
-        color="#5797ff"
-        anchor="center"
-        look-at="[gps-new-camera]"
-        scale="10 10 10"
-        gps-new-entity-place="latitude: 37.769535897409874; longitude: -3.7888669967651367;"
-        custom-field="a-text"
-      ></a-text>
-
-
- <!--
-      <a-entity look-at="[gps-new-camera]" clickhandler ardataid="1" material='color: red' geometry='primitive: box' gps-new-entity-place="latitude: 37.76376029752916; longitude:-3.7915549084011104" scale="10 10 10"></a-entity>
- -->
-
-    </a-scene>
-    <div
-        id="modal-poi"
-      class="modal fade"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="myLargeModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header bg-primary text-light">
-            <img id="poi-title-img" class="modal-title-img" src=""><h4 class="modal-title"><span id="poi-title"></span></h4>
-            <button
-              type="button"
-              class="btn-close btn-close-white"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-              onClick="stopVideos()"
-            ></button>
-          </div>
-          <div class="modal-body container">
-            <div class="swiper">
-              <!-- Additional required wrapper -->
-              <div class="swiper-wrapper">
-              </div>
-              <!-- If we need pagination -->
-              <div class="swiper-pagination"></div>
-            
-              <!-- If we need navigation buttons -->
-              <div class="swiper-button-prev" title="" onClick="stopVideos()"></div>
-              <div class="swiper-button-next" title="" onClick="stopVideos()"></div>
-            
-            </div>
-            <div class="container" id="poi-body"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script>
-     
-     addEventListener("resize", (event) => {
-       console.log("resize")
-      document.querySelector('video').setAttribute('style', 'width: 100vw;height: 100vh;object-fit: cover;position: absolute;top: 0;left: 0;');
-
-     });
-
-     
-
-    </script>
-
-    <script src="lib/popperjs-2.9.2/popper.min.js"></script>
-    <script src="lib/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-    <script src="lib/bootstrap-5.0.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/swal2/sweetalert-2.11.js"></script>
-    <script src="lib/swipper/swiper-bundle.min.js"></script>
-  </body>
+        });
+      },
+    });
+  </script>
+</head>
+<body>
+<a-scene cursor="rayOrigin: mouse;" raycaster="objects: [clickhandler];near: 0; far: 50000;"  vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
+    <a-camera look-controls-enabled='false' arjs-device-orientation-controls='smoothingFactor: 0.1' gps-new-camera='gpsMinDistance: 5'></a-camera>
+    <a-entity clickhandler material='color: red' geometry='primitive: box' gps-new-entity-place="latitude: 37.768963390927; longitude:-3.7877891548735647" scale="10 10 10"></a-entity>
+</a-scene>
+</body>
 </html>

@@ -168,8 +168,7 @@ function showPOIByIndex(index)
   //showPOI(findNameByPosition(index));
 }
 
-function showPOI(poi) {
-  console.log(landscape)
+function checkLandscape(){
   if(landscape){
     $(".modal-dialog").addClass("modal-fullscreen");
     $(".modal-dialog").removeClass("modal-xl");
@@ -177,7 +176,11 @@ function showPOI(poi) {
     $(".modal-dialog").removeClass("modal-fullscreen");
     $(".modal-dialog").addClass("modal-xl");
   }
+}
 
+function showPOI(poi) {
+  
+  checkLandscape();
 
   $(".swiper-wrapper").empty();
   swiper?.destroy();
@@ -241,6 +244,9 @@ function stopVideos() {
 }
 
 function openInfoModal() {
+
+  checkLandscape();
+
   console.log("Opening Info Modal");
 
   $(".swiper-wrapper").empty();
@@ -261,6 +267,9 @@ function openInfoModal() {
 
 function openPoiList()
 {
+
+  checkLandscape();
+
   $(".swiper-wrapper").empty();
   swiper?.destroy();
 

@@ -307,8 +307,8 @@
         "images/caracolera/víboras.jpg"
       ],
       "coordinates": [-4.0222983, 37.6251775],
-      "elevated":5,
-      "size":8
+      "elevated":9,
+      "size":14
     },
     {
       "iconSpot": "icons/teatro.png",

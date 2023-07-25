@@ -112,7 +112,7 @@
         "images/parque anillo/historia y naturaleza primer obsequio.jpg"
       ],
       "coordinates": [-3.9616907, 37.7253951],
-      "elevated":2,
+      "elevated":3,
       "size":2
       
     },
@@ -189,7 +189,7 @@
         "images/la peña/IMG_20210214_105010.jpg"
       ],
       "coordinates": [-3.9608503, 37.7181362],
-      "elevated":2,
+      "elevated":4,
       "size":3
     },
     {
@@ -308,7 +308,7 @@
       ],
       "coordinates": [-4.0222983, 37.6251775],
       "elevated":1,
-      "size":6
+      "size":15
     },
     {
       "iconSpot": "icons/teatro.png",

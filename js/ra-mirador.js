@@ -83,8 +83,8 @@ function howTo() {
   });
 }
 
-var elementSize=30;
-var imageSize=25;
+var elementSize=60;
+var imageSize=50;
 
 function renderData() {
   console.log("rendering")

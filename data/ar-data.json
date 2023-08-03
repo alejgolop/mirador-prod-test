@@ -143,7 +143,7 @@
         
       ],
       "coordinates": [-3.9649684, 37.7229272],
-      "elevated":1,
+      "elevated":-3,
       "size":0.65,
       "altitude":743
       
@@ -194,7 +194,7 @@
         "images/la peña/IMG_20210214_105010.jpg"
       ],
       "coordinates": [-3.9608503, 37.7181362],
-      "elevated":4,
+      "elevated":0,
       "size":3,
       "altitude":996
     },
@@ -296,7 +296,7 @@
         "images/artes y oficios/1689586545448.jpg"
       ],
       "coordinates": [-3.9682868, 37.7220569],
-      "elevated":0,
+      "elevated":-1,
       "size":0.9,
       "altitude":700
     },
@@ -321,7 +321,7 @@
         -3.989228098798532,
         37.6895072720581
       ],
-      "elevated":24,
+      "elevated":0,
       "size":11,
       "altitude":1140
     },
@@ -346,7 +346,7 @@
         "images/teatro/PHOTO-2023-04-23-12-20-36.jpg"
       ],
       "coordinates": [-3.9755414, 37.7182974],
-      "elevated":1,
+      "elevated":0,
       "size":3.5,
       "altitude":669
     },
@@ -424,7 +424,7 @@
         "images/cultura francisco/Tercer Premio - Cultura y naturaleza - Francisco J. Martos Armenteros.jpg"
       ],
       "coordinates": [-3.9726386, 37.7182603],
-      "elevated":0,
+      "elevated":2,
       "size":3.5,
       "altitude":663
     },

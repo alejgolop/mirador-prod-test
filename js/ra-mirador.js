@@ -117,6 +117,9 @@ function renderData() {
       element.setAttribute("material","opacity: 0.0 transparent: true");
 
      
+      element.setAttribute("position", `0 ${arPoint.altitude} 0`);      
+      
+     
 
     
       let imageElement = document.createElement("a-image");
@@ -128,10 +131,10 @@ function renderData() {
         arPoint.iconSpot.length > 1 ? arPoint.iconSpot : "#info-icon"
       );
 
-      if(arPoint.elevated>0)
+     /*  if(arPoint.elevated>0)
         {
           imageElement.setAttribute("position", `0 ${arPoint.elevated*45} 0`);      
-        }
+        } */
 
 
      
@@ -279,10 +282,6 @@ function openPoiList()
 
 
   poiList=`<ul class="list-group">`;
-
- 
-
-
  
   data.forEach((arPoint, index) => {
     poiList+=`<li class="list-group-item" onclick="showPOIByIndex(${index})">${arPoint.name}</li>`;

@@ -90,7 +90,8 @@
       ],
       "coordinates": [-3.9344341, 37.7206332],
       "elevated":3,
-      "size":10
+      "size":10,
+      "altitude":1000
     },
     {
       "iconSpot": "icons/parque anillo.png",
@@ -113,7 +114,8 @@
       ],
       "coordinates": [-3.9616907, 37.7253951],
       "elevated":3,
-      "size":2
+      "size":2,
+      "altitude":721
       
     },
     {
@@ -142,7 +144,9 @@
       ],
       "coordinates": [-3.9649684, 37.7229272],
       "elevated":1,
-      "size":0.65
+      "size":0.65,
+      "altitude":743
+      
     },
     {
       "iconSpot": "icons/san amador y santa ana.png",
@@ -167,7 +171,8 @@
       ],
       "coordinates": [-3.9636451, 37.7245476],
       "elevated":0,
-      "size":1.5
+      "size":1.5,
+      "altitude":707
     },
     {
       "iconSpot": "icons/la peña.png",
@@ -190,7 +195,8 @@
       ],
       "coordinates": [-3.9608503, 37.7181362],
       "elevated":4,
-      "size":3
+      "size":3,
+      "altitude":996
     },
     {
       "iconSpot": "icons/torre almedina.png",
@@ -216,7 +222,8 @@
       ],
       "coordinates": [-3.9663184, 37.7234728],
       "elevated":0,
-      "size":0.3
+      "size":0.3,
+      "altitude":750
     },
     {
       "iconSpot": "icons/ayuntamiento.png",
@@ -240,7 +247,8 @@
       ],
       "coordinates": [-3.9658571, 37.7229647],
       "elevated":0,
-      "size":0.5
+      "size":0.5,
+      "altitude":734
     },
     {
       "iconSpot": "icons/trinitarias.png",
@@ -262,7 +270,9 @@
       ],
       "coordinates": [-3.9661759, 37.7228711],
       "elevated":0,
-      "size":0.5
+      "size":0.5,
+      "altitude":734
+      
     },
     {
       "iconSpot": "icons/artes y oficios.png",
@@ -287,7 +297,8 @@
       ],
       "coordinates": [-3.9682868, 37.7220569],
       "elevated":0,
-      "size":0.9
+      "size":0.9,
+      "altitude":700
     },
     {
       "iconSpot": "icons/caracolera.png",
@@ -306,9 +317,13 @@
         "images/caracolera/miradorastron.jpg",
         "images/caracolera/víboras.jpg"
       ],
-      "coordinates": [-4.0222983, 37.6251775],
+      "coordinates": [
+        -3.989228098798532,
+        37.6895072720581
+      ],
       "elevated":24,
-      "size":11
+      "size":11,
+      "altitude":1140
     },
     {
       "iconSpot": "icons/teatro.png",
@@ -332,7 +347,8 @@
       ],
       "coordinates": [-3.9755414, 37.7182974],
       "elevated":1,
-      "size":3.5
+      "size":3.5,
+      "altitude":669
     },
     {
       "iconSpot": "icons/santuario virgen villa.png",
@@ -357,7 +373,8 @@
       ],
       "coordinates": [-3.9686508, 37.7233511],
       "elevated":0,
-      "size":0.6
+      "size":0.6,
+      "altitude":733
     },
     {
       "iconSpot": "icons/ermita san bartolome.png",
@@ -385,7 +402,8 @@
       ],
       "coordinates": [-3.9661168, 37.7199302],
       "elevated":0,
-      "size":1.5
+      "size":1.5,
+      "altitude":748
     },
     {
       "iconSpot": "icons/cultura francisco.png",
@@ -407,7 +425,8 @@
       ],
       "coordinates": [-3.9726386, 37.7182603],
       "elevated":0,
-      "size":3.5
+      "size":3.5,
+      "altitude":663
     },
     {
       "iconSpot": "icons/calvario.png",
@@ -428,7 +447,8 @@
       ],
       "coordinates": [-3.9657346, 37.7189733],
       "elevated":3,
-      "size":1.7
+      "size":1.7,
+      "altitude":756
     }
   ]
 }

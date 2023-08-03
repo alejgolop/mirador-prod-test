@@ -70,43 +70,15 @@
         arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false;'
         renderer='antialias: true; alpha:true'
        >
-       
-       <!-- renderer='antialias: true; alpha: true' -->
-
     <a-assets timeout="10000">
       <img id="info-icon" src="img/info-ar.png" scale="1 1 1">
     </a-assets>
 
-    <!--OFICINA-->
-
-   
-   <a-camera look-controls-enabled='false' arjs-device-orientation-controls='smoothingFactor: 0.1' gps-new-camera='simulateLatitude: 37.76908003920188;simulateLongitude: -3.7880128181942325;simulateAltitude:751;gpsMinDistance: 15'></a-camera>
-
-
-
         <!--TORRE-->
-<!--   
-    <a-camera look-controls-enabled='false' arjs-device-orientation-controls='smoothingFactor: 0.1' gps-new-camera='simulateLatitude:37.723689190362336;simulateLongitude:-3.9672218232567786;gpsMinDistance: 15'></a-camera>
- -->
+  
+    <a-camera look-controls-enabled='false' arjs-device-orientation-controls='smoothingFactor: 0.1' gps-new-camera='simulateLatitude:37.723689190362336;simulateLongitude:-3.9672218232567786;simulateAltitude:751;gpsMinDistance:15'></a-camera>
 
 
-        <a-text
-        clickhandler
-        value="TEST"
-        font= "fonts/verdana.fnt"
-        fontImage= "fonts/verdana.png"
-        color="#5797ff"
-        anchor="center"
-        look-at="[gps-new-camera]"
-        scale="10 10 10"
-        gps-new-entity-place="latitude: 37.769535897409874; longitude: -3.7888669967651367;"
-        custom-field="a-text"
-      ></a-text>
-
-
- <!--
-      <a-entity look-at="[gps-new-camera]" clickhandler ardataid="1" material='color: red' geometry='primitive: box' gps-new-entity-place="latitude: 37.76376029752916; longitude:-3.7915549084011104" scale="10 10 10"></a-entity>
- -->
 
     </a-scene>
     <div
